@@ -222,6 +222,12 @@ body {
   width: 350px;
   height: 250px;
   perspective: 1000px;
+  transition: opacity 0.5s ease-in-out 2s;
+}
+
+.envelope.open {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .envelope-body {
@@ -254,21 +260,23 @@ body {
 }
 
 .letter {
-  position: absolute;
+  position: fixed;
   width: 90%;
-  left: 5%;
-  bottom: 10px;
+  max-width: 600px;
+  left: 50%;
+  top: 50%;
   background: white;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: all 1.5s ease-in-out 0.5s;
-  transform: translateY(0);
+  transform: translate(-50%, 100vh);
   opacity: 0;
   visibility: hidden;
+  z-index: 1001;
 }
 
 .envelope.open .letter {
-  transform: translateY(-120px);
+  transform: translate(-50%, -50%);
   opacity: 1;
   visibility: visible;
 }
