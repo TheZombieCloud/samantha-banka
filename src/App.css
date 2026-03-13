@@ -232,7 +232,7 @@ body {
   background: #f4f4f4;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .envelope-flap {
@@ -261,12 +261,16 @@ body {
   background: white;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 1.5s ease-in-out 0.5s;
+  transition: all 1.5s ease-in-out 0.5s;
   transform: translateY(0);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .envelope.open .letter {
-  transform: translateY(-180px);
+  transform: translateY(-120px);
+  opacity: 1;
+  visibility: visible;
 }
 
 .letter-content {
