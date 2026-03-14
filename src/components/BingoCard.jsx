@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 
 const activities = [
-  ["Take a warm bath", "Listen to your favorite playlist", "Call a friend", "Read a chapter of a book", "Go for a walk"],
-  ["Watch a comfort show", "Make your favorite snack", "Practice deep breathing", "Journal your thoughts", "Do some stretches"],
-  ["Create something artistic", "Drink a cup of tea", "FREE", "Light a candle", "Play a game"],
-  ["Organize a small space", "Look at photos", "Take a nap", "Do a puzzle", "Try meditation"],
+  ["Jack off", "Listen to your favorite song", "Call a friend", "Read a chapter of a book", "Go for a walk"],
+  ["Watch a show", "Make your favorite snack", "Practice deep breathing", "Journal your thoughts", "Do some stretches"],
+  ["Create something artistic", "Drink water", "FREE", "Light a candle", "Play pokemon"],
+  ["Organize a small space", "Look at photos", "Talk with your mom", "Do a puzzle", "Love yourself up"],
   ["Watch cute animal videos", "Cook a new recipe", "Dance to music", "Practice gratitude", "Pamper yourself"]
 ]
 

@@ -21,12 +21,12 @@ const LetterAnimation = ({ onClose }) => {
       </div>
       <div className={`letter ${isOpen ? 'open' : ''}`}>
         <div className="letter-content">
-          <h2>My Dearest,</h2>
+          <h2>HI BABY,</h2>
           <p>I know being apart is hard, but I want you to know that you're always in my heart, no matter the distance.</p>
-          <p>I'm so proud of you for taking care of yourself while I'm away. Each of these activities you've completed shows your strength and resilience.</p>
-          <p>Remember, this time apart is temporary, but what we have is forever. I miss you more than words can say, and I can't wait until we're together again.</p>
-          <p>Keep being amazing, keep taking care of yourself, and know that I'm thinking of you every single day.</p>
-          <p className="signature">All my love,<br />Always and forever ❤️</p>
+          <p>Your my moon in my night sky. My sun during the day. My Jeff to my Epstein 😌. I'm so proud of you for taking care of yourself while I'm away. Each of these activities you've completed shows how strong my baby is.</p>
+          <p>Remember, this time apart is temporary, but what we have is forever, SERIOUSLY! I miss you so so much and can't wait for you to be in my arms again.</p>
+          <p>Keep being amazing, keep taking care of yourself, and know that I'm thinking of you every single day. Think of that cute smile, and those big titties</p>
+          <p className="signature">All my love,<br />Always and forever, YOUR POOKIE ❤️</p>
         </div>
       </div>
       <button className="close-letter" onClick={onClose}>Close</button>
