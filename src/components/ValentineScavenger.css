@@ -1,4 +1,8 @@
 .valentine-app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   display: flex;
@@ -6,6 +10,7 @@
   justify-content: center;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: auto;
 }
 
 .valentine-container {
