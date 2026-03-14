@@ -1,0 +1,214 @@
+.heart-letter-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.heart-wrapper {
+  position: relative;
+  perspective: 1500px;
+}
+
+.closed-heart {
+  cursor: pointer;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.heart-shape {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.heart-left,
+.heart-right {
+  position: absolute;
+  width: 100px;
+  height: 160px;
+  background: #ff1744;
+  border-radius: 100px 100px 0 0;
+  transform-origin: bottom;
+}
+
+.heart-left {
+  left: 50px;
+  transform: rotate(-45deg);
+}
+
+.heart-right {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.heart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  pointer-events: none;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.opened-heart {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  animation: openHeart 1s ease-out forwards;
+}
+
+.heart-left-open,
+.heart-right-open {
+  width: 100px;
+  height: 160px;
+  background: linear-gradient(135deg, #ff1744 0%, #ff5252 100%);
+  border-radius: 100px 100px 0 0;
+  animation: unfoldHeart 1.2s ease-out forwards;
+}
+
+.heart-left-open {
+  transform-origin: right center;
+  animation-name: unfoldLeft;
+}
+
+.heart-right-open {
+  transform-origin: left center;
+  animation-name: unfoldRight;
+}
+
+@keyframes unfoldLeft {
+  0% {
+    transform: rotate(-45deg) translateX(50px);
+  }
+  100% {
+    transform: rotate(-90deg) translateX(0);
+  }
+}
+
+@keyframes unfoldRight {
+  0% {
+    transform: rotate(45deg) translateX(-50px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(0);
+  }
+}
+
+.letter-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: fadeInLetter 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInLetter {
+  to {
+    opacity: 1;
+  }
+}
+
+.letter-title {
+  font-family: 'Brush Script MT', cursive;
+  color: #ff1744;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #ffe0e6;
+  padding-bottom: 15px;
+}
+
+.letter-body {
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  color: #333;
+  font-size: 18px;
+}
+
+.letter-body p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.letter-signature {
+  margin-top: 40px;
+  font-style: italic;
+  text-align: right;
+  font-size: 20px;
+  color: #ff1744;
+}
+
+.instruction {
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .letter-content {
+    padding: 25px;
+  }
+
+  .letter-title {
+    font-size: 28px;
+  }
+
+  .letter-body {
+    font-size: 16px;
+  }
+
+  .heart-shape {
+    width: 150px;
+    height: 150px;
+  }
+
+  .heart-left,
+  .heart-right {
+    width: 75px;
+    height: 120px;
+    border-radius: 75px 75px 0 0;
+  }
+
+  .heart-left {
+    left: 37.5px;
+  }
+}

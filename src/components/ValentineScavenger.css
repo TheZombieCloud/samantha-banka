@@ -1,0 +1,244 @@
+.valentine-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.valentine-container {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+}
+
+.intro-card,
+.question-card,
+.puzzle-card,
+.final-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.valentine-title {
+  font-size: 48px;
+  color: #d81b60;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.valentine-message {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-heart {
+  background: linear-gradient(135deg, #ff1744 0%, #ff5252 100%);
+  color: white;
+  border: none;
+  padding: 20px 50px;
+  font-size: 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: heartPulse 2s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.btn-heart:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(255, 23, 68, 0.4);
+}
+
+.riddle-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease-out;
+}
+
+.clue-title {
+  font-size: 32px;
+  color: #d81b60;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.valentine-hint {
+  font-size: 16px;
+  color: #888;
+  margin-top: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.hunt-area {
+  position: relative;
+  height: 400px;
+  background: linear-gradient(135deg, #ffe0e6 0%, #ffd1dc 100%);
+  border-radius: 15px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.hunt-item {
+  position: absolute;
+  font-size: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hunt-item:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 10px rgba(255, 23, 68, 0.6));
+}
+
+.hunt-item.found {
+  animation: found 0.5s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes found {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5) rotate(360deg);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.answer-input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin: 20px 0;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.answer-input:focus {
+  border-color: #d81b60;
+  box-shadow: 0 0 10px rgba(216, 27, 96, 0.2);
+}
+
+.scrambled-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #667eea;
+  letter-spacing: 5px;
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffe0e6 0%, #ffd1dc 100%);
+  border-radius: 10px;
+}
+
+.valentine-progress {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .intro-card,
+  .question-card,
+  .puzzle-card,
+  .final-card,
+  .riddle-container {
+    padding: 30px 20px;
+  }
+
+  .valentine-title {
+    font-size: 36px;
+  }
+
+  .valentine-message {
+    font-size: 18px;
+  }
+
+  .btn-primary,
+  .btn-heart {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+
+  .hunt-item {
+    font-size: 40px;
+  }
+
+  .scrambled-text {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+}
